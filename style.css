@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+}
+
+.container {
+  padding: 50px;
+}
+
+#display, #input{
+  margin-top: 5px;
+  text-align: center;
+  border: 3px solid purple;
+  width: 99%;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

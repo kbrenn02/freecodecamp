@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Drum Machine</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 
+
+Hello Camper!
+
+Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet/css">
+<title>A Drum Machine</title>
+
+
+<script>
+function myFunction(event) {
+  let key = event.key.toLowerCase();
+  switch(key){
+    case 'q':
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3');
+      audio.play();
+      document.getElementById('display').innerText = "Heater 1";
+      break;
+    case 'w':
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3');
+      audio.play();
+      document.getElementById('display').innerText = "Heater 2";
+      break;
+    case 'e':
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3');
+      audio.play();
+      document.getElementById('display').innerText = "Heater 3";
+      break;
+    case 'a':
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3');
+      audio.play();
+      document.getElementById('display').innerText = "Heater 4";
+      break;
+    case 's':
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3');
+      audio.play();
+      document.getElementById('display').innerText = "Clap";
+      break;
+    case 'd':
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3');
+      audio.play();
+      document.getElementById('display').innerText = "Open-HH";
+      break;
+    case 'z':
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3');
+      audio.play();
+      document.getElementById('display').innerText = "Kick-n'-Hat";
+      break;
+    case 'x':
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3');
+      audio.play();
+      document.getElementById('display').innerText = "Kick";
+      break;
+    case 'c':
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3');
+      audio.play();
+      document.getElementById('display').innerText = "Closed-HH";
+      break;
+  }
+}
+</script>
+
+<div class="container" id="drum-machine">
+  <h1>A Drum Machine</h1>
+  <div class="row">
+    <!-- First button -->
+      <button type="button" class="drum-pad column" id="heater1" onclick="document.getElementById('Q').play();document.getElementById('display').innerText = 'Heater 1'">
+          <audio class="clip" id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3">
+          </audio>
+        Q
+      </button>
+    
+    <!-- Second button -->
+      <button type="button" class="drum-pad column" id="heater2" onclick="document.getElementById('W').play();document.getElementById('display').innerText = 'Heater 2'">
+          <audio class="clip" id="W" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3">
+          </audio>
+        W
+      </button>
+    
+    <!-- Third button -->
+      <button type="button" class="drum-pad column" id="heater3" onclick="document.getElementById('E').play();document.getElementById('display').innerText = 'Heater 3'"> 
+          <audio class="clip" id="E" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3">
+          </audio>
+        E
+      </button>
+  </div>
+    
+  <div class="row">
+    <!-- Fourth button -->
+      <button type="button" class="drum-pad column" id="heater4" onclick="document.getElementById('A').play();document.getElementById('display').innerText = 'Heater 4'">
+          <audio class="clip" id="A" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3">
+          </audio>
+        A
+      </button>
+    
+    <!-- Fifth button -->
+      <button type="button" class="drum-pad column" id="clap" onclick="document.getElementById('S').play();document.getElementById('display').innerText = 'Clap'">
+          <audio class="clip" id="S" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3">
+          </audio>
+        S
+      </button>
+    
+    <!-- Sixth button -->
+      <button type="button" class="drum-pad column" id="open_hh" onclick="document.getElementById('D').play();document.getElementById('display').innerText = 'Open-HH'">
+          <audio class="clip" id="D" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3">
+          </audio>
+        D
+      </button>
+  </div>
+  
+  <div class="row"> 
+    <!-- Seventh button -->
+      <button type="button" class="drum-pad column" id="kick_n_hat" onclick="document.getElementById('Z').play();document.getElementById('display').innerText = 'Kick-n\'-Hat'">
+          <audio class="clip" id="Z" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3">
+          </audio>
+        Z
+      </button>
+
+    <!-- Eigth button -->
+      <button type="button" class="drum-pad column" id="kick" onclick="document.getElementById('X').play();document.getElementById('display').innerText = 'Kick'">
+          <audio class="clip" id="X" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3">
+          </audio>
+        X
+      </button>
+    
+    <!-- Ninth button -->
+      <button type="button" class="drum-pad column" id="closed-hh" onclick="document.getElementById('C').play();document.getElementById('display').innerText = 'Closed-HH'">
+          <audio class="clip" id="C" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3">         
+          </audio>
+        C
+      </button>
+  </div>
+  
+    <!-- Input from user -->
+      <div id="input">
+        <input type="text" id="inputField" size="40" onkeydown="myFunction(event)">
+      </div>
+
+    <!-- Display board -->
+  <div id="display"><i>wait for it</i></div>
+  
+    
+</div>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
